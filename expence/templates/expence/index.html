@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Главная :: Планирование расходов</title>
+	</head>
+	<body>
+		<h1>Планирование расходов</h1>
+			<a href="{% url 'inc' %}"><h2>Доходы</h2></a>
+			<p>Общая сумма: {{ sum_inco }}</p>
+			<a href="{% url 'addinc' %}">Добавить</a>
+			<a href="{% url 'spe' %}"><h2>Расходы</h2></a>
+			<p>Общая сумма: {{ sum_spen }}</p>
+			<a href="{% url 'addspe' %}">Добавить</a>	
+			<a href="{% url 'sav' %}"><h2>Сбережения</h2></a>
+			<p>Общая сумма: {{ sum_savi }}</p>
+			<a href="{% url 'addsav' %}">Добавить</a>			
+	</body>
+</html>

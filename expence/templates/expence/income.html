@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Главная :: Планирование расходов</title>
+	</head>
+	<body>
+		<a href="{% url 'index' %}"><h1>Планирование расходов</h1></a>
+			<h2>Доходы</h2>
+			{% for inc in inco %}
+			<h3>{{ inc.title }}</h3>
+			<ul>
+			<li>Сумма: {{ inc.amount }}</li>
+			<li>Дата: {{ inc.date|date:"d.m.Y H:i:s" }}</li>
+			</ul>
+			{% endfor %}
+			<p>Общая сумма: {{ sum_inco }}</p>
+			<a href="{% url 'addinc' %}">Добавить</a>
+	</body>
+</html>
